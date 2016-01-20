@@ -10,17 +10,17 @@ Features of the ticket system include:
 - Ticket metadata is collected and managed in a linked Google Sheet with the following columns (fields): Timestamp, Subject, Urgency, Contact email (submitters email), Description, RLTS helper (ticket responder), Notes, Resolution, TimeSpent_hours, Category (type of ticket)
 
 - A customized drop-down menu in the Google Sheet can trigger the following actions
--- assign a ticket (send email) to a ticket responder including ticket info
--- send a status email to a ticket submitters including ticket info and status
--- push ticket metadata to a linked knowledgebase (this feature is currently not in use)
+  - assign a ticket (send email) to a ticket responder including ticket info
+  - send a status email to a ticket submitters including ticket info and status
+  - push ticket metadata to a linked knowledgebase (this feature is currently not in use)
 
 - A Stats tab of the Google Sheet tracks the following statistics:
---  Total time spend responding to tickets (in hours)
---  Status breakdown (# of tickets in each category: new, resolved, in-progress, etc.)
---  Category breakdown (# of tickets by category: catalog edit, finding aid edit, info request, reprocessing request, etc.)
---  Urgency breakdown (high, medium, low)
---  Resolver stats (# of tickets resolved by each TS staff member)
---  Submitter stats (# of tickets submitted by each RS staff member)
+  -  Total time spend responding to tickets (in hours)
+  -  Status breakdown (# of tickets in each category: new, resolved, in-progress, etc.)
+  -  Category breakdown (# of tickets by category: catalog edit, finding aid edit, info request, reprocessing request, etc.)
+  -  Urgency breakdown (high, medium, low)
+  -  Resolver stats (# of tickets resolved by each TS staff member)
+  -  Submitter stats (# of tickets submitted by each RS staff member)
 
 
 Scripts heavily modified from samples in this tutorial: https://developers.google.com/apps-script/articles/helpdesk_tutorial?hl=en
