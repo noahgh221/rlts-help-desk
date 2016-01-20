@@ -26,6 +26,6 @@ This ticket system is currently used by Rubenstein Library Technical Services to
   -  Submitter stats (# of tickets submitted by each RS staff member)
 
 
-##Scripts heavily modified from samples in this tutorial: https://developers.google.com/apps-script/articles/helpdesk_tutorial?hl=en
+###Scripts heavily modified from samples in this tutorial: https://developers.google.com/apps-script/articles/helpdesk_tutorial?hl=en
 
-##More documentation coming soon.....
+###More documentation coming soon.....
