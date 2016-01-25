@@ -25,6 +25,8 @@ This RLTS Help Desk is a ticketing system currently used by [Rubenstein Library]
   -  Resolver stats (# of tickets resolved by each TS staff member)
   -  Submitter stats (# of tickets submitted by each RS staff member)
 
+##Getting Started
+Coming soon...
 
 ###Scripts heavily modified from samples in this [tutorial] (https://developers.google.com/apps-script/articles/helpdesk_tutorial?hl=en)
 
