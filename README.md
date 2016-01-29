@@ -31,8 +31,8 @@ Scripts heavily modified from samples in this [tutorial] (https://developers.goo
 
 ##Getting Started
 
-1. Get sample sheet with linked form and Google Script:https://docs.google.com/spreadsheets/d/1VvtLo2sFZCVEzK8j_ib8bFWuW3C0oPiTc-hPQaJEXDA/edit?usp=sharing
-2. Copy the sheet and linked form and script to your own Google account
+1. Get sample sheet with linked form and Google Script [here] (https://docs.google.com/spreadsheets/d/1VvtLo2sFZCVEzK8j_ib8bFWuW3C0oPiTc-hPQaJEXDA/edit?usp=sharing)
+2. Copy the sheet and linked form and script to your own Google account (File>Copy)
 3. Customize as needed:
 
 
