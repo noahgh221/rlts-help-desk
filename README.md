@@ -3,6 +3,8 @@ A Google Script for creating a simple help desk / ticket system using Google She
 
 This RLTS Help Desk is a ticketing system currently used by [Rubenstein Library] (http://library.duke.edu/rubenstein/) Technical Services to collect and manage tickets submitted by Rubenstein Library Research Services staff.  Tickets typically include change requests for catalog records and [finding aids] (library.duke.edu/rubenstein/findingaids/) or requests for information about the availability or location of materials. Most tickets are the result of reference interactions that require some assistance from Technical Services.  The ticket systems allows TS to collect, manage, and respond to tickets in a systematic way and it also allows tracking of ticket statistics for quantifying effort.
 
+Scripts heavily modified from samples in this [tutorial] (https://developers.google.com/apps-script/articles/helpdesk_tutorial?hl=en)
+
 ##Features of the ticket system include:
 - Ticket submission using an online, simple, customizable Google Form
 
@@ -25,7 +27,7 @@ This RLTS Help Desk is a ticketing system currently used by [Rubenstein Library]
   -  Resolver stats (# of tickets resolved by each TS staff member)
   -  Submitter stats (# of tickets submitted by each RS staff member)
 
-###Scripts heavily modified from samples in this [tutorial] (https://developers.google.com/apps-script/articles/helpdesk_tutorial?hl=en)
+
 
 ##Getting Started
 
