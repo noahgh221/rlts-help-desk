@@ -19,6 +19,8 @@ Scripts heavily modified from samples in this [tutorial] (https://developers.goo
   - send a status email to a ticket submitters including ticket info and status
   - push ticket metadata to a linked knowledgebase (this feature is currently not in use)
 
+![Screenshot of custom drop-down](/ticket_screenshot.png "Screenshot of custom drop-down menu")
+
 - A Stats tab of the Google Sheet tracks the following statistics:
   -  Total time spend responding to tickets (in hours)
   -  Status breakdown (# of tickets in each category: new, resolved, in-progress, etc.)
