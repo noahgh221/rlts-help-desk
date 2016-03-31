@@ -37,9 +37,10 @@ Instructions for installing and configuring your own TS Help Desk
 
 1. Access the sample sheet with linked form and Google Script [here] (https://docs.google.com/spreadsheets/d/1VvtLo2sFZCVEzK8j_ib8bFWuW3C0oPiTc-hPQaJEXDA/edit?usp=sharing)
 2. Copy the sheet, linked form, and Google script to your own Google account (File>Copy)
-3. Customize the script to alter the text of automated emails or change notification behaviors (Tools>Script editor)
-4. Customize the statistics tab as needed. 
-5. Customize the Google sheet drop-down values to track your own categories or update conditional formatting to highlight cells or rows based on values (all "new" tickets are green, etc.). Note that the Google script references column header values, so changing column headers in the Google Sheet without changing references to them in the script will break some functionality.
+3. Customize the submission form as needed (Form>Edit)
+4. Customize the script to alter the text of automated emails or change notification behaviors (Tools>Script editor).
+5. Customize the statistics tab as needed. 
+6. Customize the Google sheet drop-down values to track your own categories or update conditional formatting to highlight cells or rows based on values (all "new" tickets are green, etc.). Note that the Google script references column header values, so changing column headers in the Google Sheet without changing references to them in the script will break some functionality.
 
 Note that automated emails sent from the Help Desk will be sent from the email address associated with the Google account you use to access the Google Sheet.  If you are uncomfortable using your personal email account, you may want to log into the Google sheet using an institutional Google account.
 
