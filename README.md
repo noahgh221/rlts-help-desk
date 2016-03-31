@@ -43,5 +43,7 @@ Instructions for installing and configuring your own TS Help Desk
 
 Note that automated emails sent from the Help Desk will be sent from the email address associated with the Google account you use to access the Google Sheet.  If you are uncomfortable using your personal email account, you may want to log into the Google sheet using an institutional Google account.
 
+The first time you use the drop-down to send a status email or assign a ticket, the app will request your authorization to run. Here, you are essentially agreeing to let the app send emails from your linked Google account.
+
 
 
