@@ -21,7 +21,7 @@ function formSubmitReply(e) {
                     "high urgency issues as soon as possible.  Others issues will be addressed as time permits. " +
                     // "You are currently number " + (numNew + 1) + " in the queue." +
                     "\n\nSincerely, \n\nYour friendly TS Helper. \n\n[PLEASE DO NOT RESPOND DIRECTLY TO THIS EMAIL] \n\n" + 
-                      "Submit a new request at: [link to google sheet]",
+                      "Submit a new request at: [link to live Google Form]",
                     {name:"TS Help Desk"});
 }
 
@@ -52,7 +52,7 @@ function emailNotificationWithTicketMetadata() {
                     "\n\nDESCRIPTION OF ISSUE:\n" + description +
                     "\n\nUrgency: " + urgency +
                     "\n\nSubmitter: " + submitter +
-                    "\n\nView Tickets: [link to google sheet]",
+                    "\n\nView Tickets: [link to Google Sheet]",
                    {name:"TS Help Desk"});
 }
 
@@ -82,9 +82,9 @@ function emailStatusUpdates() {
   body += "\n\nNOTES: " + sheet.getRange(row, getColIndexByName("Notes")).getValue();
   body += "\n\nRESOLUTION: " + sheet.getRange(row, getColIndexByName("Resolution")).getValue();
   body += "\n\n=====================\n\n[PLEASE DO NOT RESPOND DIRECTLY TO THIS EMAIL. Email your TS Helper if you have questions or updates]";
-  body += "\n\nSubmit a new request at: [link to ticket form]";
+  body += "\n\nSubmit a new request at: [link to live Google Form]";
   
-  MailApp.sendEmail(userEmail, subject, body, {name:"RLTS Help Desk"});
+  MailApp.sendEmail(userEmail, subject, body, {name:"TS Help Desk"});
 }
 
 function emailAssign() {
