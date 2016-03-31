@@ -20,9 +20,9 @@ function formSubmitReply(e) {
                     "\n\n=====================\n\nThanks for submitting your issue or request. We'll try to resolve " +
                     "high urgency issues as soon as possible.  Others issues will be addressed as time permits. " +
                     // "You are currently number " + (numNew + 1) + " in the queue." +
-                    "\n\nSincerely, \n\nYour friendly RLTS Helper. \n\n[PLEASE DO NOT RESPOND DIRECTLY TO THIS EMAIL] \n\n" + 
+                    "\n\nSincerely, \n\nYour friendly TS Helper. \n\n[PLEASE DO NOT RESPOND DIRECTLY TO THIS EMAIL] \n\n" + 
                       "Submit a new request at: [link to google sheet]",
-                    {name:"RLTS Help Desk"});
+                    {name:"TS Help Desk"});
 }
 
 
@@ -53,7 +53,7 @@ function emailNotificationWithTicketMetadata() {
                     "\n\nUrgency: " + urgency +
                     "\n\nSubmitter: " + submitter +
                     "\n\nView Tickets: [link to google sheet]",
-                   {name:"RLTS Help Desk"});
+                   {name:"TS Help Desk"});
 }
 
 
@@ -81,7 +81,7 @@ function emailStatusUpdates() {
   body += "\n\nDESCRIPTION: " + sheet.getRange(row, getColIndexByName("Description")).getValue();
   body += "\n\nNOTES: " + sheet.getRange(row, getColIndexByName("Notes")).getValue();
   body += "\n\nRESOLUTION: " + sheet.getRange(row, getColIndexByName("Resolution")).getValue();
-  body += "\n\n=====================\n\n[PLEASE DO NOT RESPOND DIRECTLY TO THIS EMAIL. Email your RLTS Helper if you have questions or updates]";
+  body += "\n\n=====================\n\n[PLEASE DO NOT RESPOND DIRECTLY TO THIS EMAIL. Email your TS Helper if you have questions or updates]";
   body += "\n\nSubmit a new request at: [link to ticket form]";
   
   MailApp.sendEmail(userEmail, subject, body, {name:"RLTS Help Desk"});
@@ -99,7 +99,7 @@ function emailAssign() {
   body += "\n\nNOTES: " + sheet.getRange(row, getColIndexByName("Notes")).getValue();
   body += "\n\nRESOLUTION: " + sheet.getRange(row, getColIndexByName("Resolution")).getValue();
   body += "\n\n=====================\n\n[PLEASE DO NOT RESPOND DIRECTLY TO THIS EMAIL]";
-  MailApp.sendEmail(userEmail, subject, body, {name:"RLTS Help Desk"});
+  MailApp.sendEmail(userEmail, subject, body, {name:"TS Help Desk"});
 }
 
 
