@@ -46,5 +46,4 @@ Note that automated emails sent from the Help Desk will be sent from the email a
 
 The first time you use the drop-down to send a status email or assign a ticket, the app will request your authorization to run. Here, you are essentially agreeing to let the app send emails from your linked Google account.
 
-
-
+If you have comments or questions, please create an Issue at: https://github.com/noahgh221/rlts-help-desk/issues
