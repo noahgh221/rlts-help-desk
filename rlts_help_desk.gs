@@ -1,37 +1,9 @@
-function formSubmitReply(e) {
-  var userEmail = e.values[3];
-  var sheet = SpreadsheetApp.getActiveSheet();
-  var lastRow = sheet.getLastRow();
-  var row = sheet.getActiveRange().getRowIndex();
-  // Set the status of the new ticket to 'New'.
-  // Column H is the Status column
-  sheet.getRange(lastRow, getColIndexByName("Status")).setValue("New");
-
-  // Calculate how many other 'New' tickets are ahead of this one
-  var numNew = 0;
-  for (var i = 2; i < lastRow; i++) {
-    if (sheet.getRange(i, getColIndexByName("Status")).getValue() == "New") {
-      numNew++;
-    }
-  }
-  MailApp.sendEmail(userEmail,
-                    "RLTS Ticket #" + lastRow + " " + sheet.getRange(lastRow, getColIndexByName("Subject")).getValue(),
-                    "DESCRIPTION OF ISSUE:\n" + sheet.getRange(lastRow, getColIndexByName("Description")).getValue() +
-                    "\n\n=====================\n\nThanks for submitting your issue or request. We'll try to resolve " +
-                    "high urgency issues as soon as possible.  Others issues will be addressed as time permits. " +
-                    // "You are currently number " + (numNew + 1) + " in the queue." +
-                    "\n\nSincerely, \n\nYour friendly TS Helper. \n\n[PLEASE DO NOT RESPOND DIRECTLY TO THIS EMAIL] \n\n" + 
-                      "Submit a new request at: [link to live Google Form]",
-                    {name:"TS Help Desk"});
-}
-
-
+//auto send email with ticket metadata to selected email addressses in toNotify variable
 function emailNotificationWithTicketMetadata() {
   var sheet = SpreadsheetApp.getActiveSheet();
   var lastRow = sheet.getLastRow();
   var row = sheet.getActiveRange().getRowIndex();
-  //email addresses below are automatically notified on form submit 
-  var toNotify = 'person@email.com, person2@email.com';
+  var toNotify = 'email1@email.edu, email2@email.edu';
   var submitter = sheet.getRange(row, getColIndexByName("Contact email")).getValue();
   var urgency = sheet.getRange(row, getColIndexByName("Urgency")).getValue();
   var subject = sheet.getRange(lastRow, getColIndexByName("Subject")).getValue();
@@ -52,11 +24,11 @@ function emailNotificationWithTicketMetadata() {
                     "\n\nDESCRIPTION OF ISSUE:\n" + description +
                     "\n\nUrgency: " + urgency +
                     "\n\nSubmitter: " + submitter +
-                    "\n\nView Tickets: [link to Google Sheet]",
-                   {name:"TS Help Desk"});
+                    "\n\nView Tickets: https://docs.google.com/spreadsheets/d/1MkMNzyX-2keiAJXBfYrb0YmP2pdhSCzrEQj7q6o3Gj8/edit?usp=sharing",
+                   {name:"RLTS Help Desk"});
 }
 
-
+//find columns by column header name
 function getColIndexByName(colName) {
   var sheet = SpreadsheetApp.getActiveSheet();
   var numColumns = sheet.getLastColumn();
@@ -70,6 +42,7 @@ function getColIndexByName(colName) {
   return -1;
 }
 
+//send status update email when choosing "send status update" from drop-down
 function emailStatusUpdates() {
   var sheet = SpreadsheetApp.getActiveSheet();
   var row = sheet.getActiveRange().getRowIndex();
@@ -81,12 +54,13 @@ function emailStatusUpdates() {
   body += "\n\nDESCRIPTION: " + sheet.getRange(row, getColIndexByName("Description")).getValue();
   body += "\n\nNOTES: " + sheet.getRange(row, getColIndexByName("Notes")).getValue();
   body += "\n\nRESOLUTION: " + sheet.getRange(row, getColIndexByName("Resolution")).getValue();
-  body += "\n\n=====================\n\n[PLEASE DO NOT RESPOND DIRECTLY TO THIS EMAIL. Email your TS Helper if you have questions or updates]";
-  body += "\n\nSubmit a new request at: [link to live Google Form]";
+  body += "\n\n=====================\n\n[PLEASE DO NOT RESPOND DIRECTLY TO THIS EMAIL. Email your RLTS Helper if you have questions or updates]";
+  body += "\n\nSubmit a new request at: https://docs.google.com/spreadsheet/viewform?formkey=dE1yLTlySk9jbmFwcWFZcGE4LUw1Wnc6MA";
   
-  MailApp.sendEmail(userEmail, subject, body, {name:"TS Help Desk"});
+  MailApp.sendEmail(userEmail, subject, body, {name:"RLTS Help Desk"});
 }
 
+//send email when choosing "assign ticket" from drop-down
 function emailAssign() {
   var sheet = SpreadsheetApp.getActiveSheet();
   var row = sheet.getActiveRange().getRowIndex();
@@ -99,30 +73,12 @@ function emailAssign() {
   body += "\n\nNOTES: " + sheet.getRange(row, getColIndexByName("Notes")).getValue();
   body += "\n\nRESOLUTION: " + sheet.getRange(row, getColIndexByName("Resolution")).getValue();
   body += "\n\n=====================\n\n[PLEASE DO NOT RESPOND DIRECTLY TO THIS EMAIL]";
-  MailApp.sendEmail(userEmail, subject, body, {name:"TS Help Desk"});
+  MailApp.sendEmail(userEmail, subject, body, {name:"RLTS Help Desk"});
 }
 
-
+//creates custom drop-down menu
 function onOpen() {
   var subMenus = [{name:"Send Status Email", functionName: "emailStatusUpdates"},
-            {name:"Assign Ticket", functionName: "emailAssign"},
-            {name:"Schedule Appointment", functionName: "scheduleAppointment"},
-            {name:"Push to KB", functionName: "pushToKb"}];
+            {name:"Assign Ticket", functionName: "emailAssign"}];
   SpreadsheetApp.getActiveSpreadsheet().addMenu("Help Desk Menu", subMenus);
-}​
-
-
-
-
-function pushToKb() {
-  var sheet = SpreadsheetApp.getActiveSheet();
-  var row = sheet.getActiveRange().getRowIndex();
-  var site = SitesApp.getSite("site", "rltshelpdesk");
-  var kbPage = site.getChildByName("kb");
-  var values = [sheet.getRange(row, getColIndexByName("Subject")).getValue(),
-                sheet.getRange(row, getColIndexByName("Description")).getValue(),
-                sheet.getRange(row, getColIndexByName("Notes")).getValue(),
-                sheet.getRange(row, getColIndexByName("Resolution")).getValue(),
-                sheet.getRange(row, getColIndexByName("Category")).getValue()];
-  kbPage.addListItem(values);
 }
