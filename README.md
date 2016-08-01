@@ -10,8 +10,6 @@ The system is powered by a custom Google Script, heavily modified from samples i
 ##Features of the ticket system include:
 - Submit tickets using an simple, customizable, online Google Form
 
-- Receive confirmation emails after submitting a ticket that including ticket metadata and a ticket number
-
 - Automated emails sent to select TS staff when tickets are submitted (can subscribe/unsubscribe to notifications)
 
 - Ticket metadata is collected and managed in a linked Google Sheet with the following columns (fields): Timestamp, Subject, Urgency, Contact email (submitters email), Description, RLTS helper (ticket responder), Notes, Resolution, TimeSpent_hours, Category (type of ticket)
@@ -19,7 +17,6 @@ The system is powered by a custom Google Script, heavily modified from samples i
 - A customized drop-down menu in the Google Sheet provides options to:
   - assign a ticket (send email) to a ticket responder including ticket info
   - send a status email to a ticket submitters with updates on ticket status
-  - push ticket metadata to a linked knowledgebase (this feature is currently not in use at Duke)
 
 ![Screenshot of custom drop-down](/ticket_screenshot.png "Screenshot of custom drop-down menu")
 
