@@ -1,11 +1,11 @@
 # rlts-help-desk
 A Google Script for creating a simple help desk / ticket system using Google Sheets with a linked Google Form.
 
-The RLTS Help Desk is a ticketing system currently used by the [Rubenstein Library] (http://library.duke.edu/rubenstein/) Technical Services Department (RLTS) to collect and manage tickets submitted by other Rubenstein Library staff. Tickets typically include change requests for catalog records and [finding aids] (library.duke.edu/rubenstein/findingaids/), requests for additional processing or conservation work, or requests for information about the availability or location of materials. Most tickets are the result of reference interactions that require some assistance from Technical Services.
+The RLTS Help Desk is a ticketing system currently used by the [Rubenstein Library](http://library.duke.edu/rubenstein/) Technical Services Department (RLTS) to collect and manage tickets submitted by other Rubenstein Library staff. Tickets typically include change requests for catalog records and [finding aids](library.duke.edu/rubenstein/findingaids/), requests for additional processing or conservation work, or requests for information about the availability or location of materials. Most tickets are the result of reference interactions that require some assistance from Technical Services.
 
 The ticket systems allows the Rubenstein Library Technical Services department to collect, manage, and respond to tickets in a systematic way and it also allows tracking of ticket statistics for quantifying effort.
 
-The system is powered by a custom Google Script, heavily modified from samples in this [tutorial] (https://developers.google.com/apps-script/articles/helpdesk_tutorial?hl=en)
+The system is powered by a custom Google Script, heavily modified from samples in this [tutorial](https://developers.google.com/apps-script/articles/helpdesk_tutorial?hl=en)
 
 ## Features of the ticket system include:
 - Submit tickets using an simple, customizable, online Google Form
@@ -32,7 +32,7 @@ The system is powered by a custom Google Script, heavily modified from samples i
 ## Getting Started
 Instructions for installing and configuring your own TS Help Desk
 
-1. Access the sample sheet with linked form and Google Script [here] (https://docs.google.com/spreadsheets/d/1VvtLo2sFZCVEzK8j_ib8bFWuW3C0oPiTc-hPQaJEXDA/edit?usp=sharing)
+1. Access the sample sheet with linked form and Google Script [here](https://docs.google.com/spreadsheets/d/1VvtLo2sFZCVEzK8j_ib8bFWuW3C0oPiTc-hPQaJEXDA/edit?usp=sharing)
 2. Copy the sheet, linked form, and Google script to your own Google account (File>Copy)
 3. Customize the submission form as needed (Form>Edit)
 4. Customize the script to alter the text of automated emails or change notification behaviors (Tools>Script editor).
