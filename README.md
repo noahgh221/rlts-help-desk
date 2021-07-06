@@ -7,7 +7,7 @@ The ticket systems allows the Rubenstein Library Technical Services department t
 
 The system is powered by a custom Google Script, heavily modified from samples in this [tutorial] (https://developers.google.com/apps-script/articles/helpdesk_tutorial?hl=en)
 
-##Features of the ticket system include:
+## Features of the ticket system include:
 - Submit tickets using an simple, customizable, online Google Form
 
 - Automated emails sent to select TS staff when tickets are submitted (can subscribe/unsubscribe to notifications)
@@ -29,7 +29,7 @@ The system is powered by a custom Google Script, heavily modified from samples i
   -  Submitter stats (# of tickets submitted by each RS staff member)
 
 
-##Getting Started
+## Getting Started
 Instructions for installing and configuring your own TS Help Desk
 
 1. Access the sample sheet with linked form and Google Script [here] (https://docs.google.com/spreadsheets/d/1VvtLo2sFZCVEzK8j_ib8bFWuW3C0oPiTc-hPQaJEXDA/edit?usp=sharing)
